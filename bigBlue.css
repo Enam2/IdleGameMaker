@@ -1,0 +1,166 @@
+﻿.box
+{
+	text-align:center;
+	padding:0px;
+	box-shadow:none;
+}
+
+.thing,.box-header,.box-footer,.box-bit
+{
+	background:#39f;
+	box-shadow:0px 0px 4px rgba(0,0,0,0.2),1px 1px 2px rgba(0,0,0,0.5),0px 0px 4px rgba(255,255,255,0.5) inset;
+}
+.box-bit{border-radius:20px;}
+
+.box-header
+{
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+	margin-bottom:4px;
+}
+.box-footer
+{
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	margin-top:4px;
+}
+
+
+#box-main
+{
+	left:0px;
+	top:0px;
+	bottom:0px;
+	overflow:hidden;
+	width:60%;
+	position:absolute;
+}
+#box-res.fullWidth
+{
+	width:100%;
+	top:5%;
+	height:5%;
+	min-height:32px;
+	z-index:100;
+	position:absolute;
+}
+#box-buttons
+{
+	top:0px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	position:absolute;
+}
+#box-store
+{
+	right:0px;
+	top:0px;
+	bottom:0px;
+	width:40%;
+	position:absolute;
+}
+#box-buildings,#box-upgrades
+{
+	top:0px;
+	bottom:0px;
+	width:50%;
+	right:0%;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	padding-bottom:48px;/* this is to accommodate the info and settings buttons */
+	position:absolute;
+}
+#box-buildings
+{right:50%;}
+
+#box-buildings{background:linear-gradient(to right,rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 20%);}
+#box-upgrades{background:rgba(0,0,0,0.3);}
+
+#bulkDisplay{margin:-11px 24px 4px 24px;}
+
+
+.thing
+{
+	display:inline-block;
+	padding:0px;
+	margin:2px;
+	cursor:pointer;
+}
+.thing:hover,.thing.lit
+{
+	background:#6cf;
+}
+.thing.cantAfford
+{
+	opacity:0.65;
+}
+.upgrade.cantAfford
+{
+	box-shadow:0px 0px 4px #39f;
+	border-radius:8px;
+}
+.upgrade.cantAfford:hover
+{
+	box-shadow:0px 0px 4px #6cf;
+}
+.upgrade.owned,.achiev.owned
+{
+	background:#6cf;
+}
+.thing-text,.thing-costs{font-weight:bold;}
+
+.building
+{
+	border-top-left-radius:20px;
+	border-bottom-left-radius:20px;
+	display:block;
+	margin-right:0px;
+	font-size:14px;
+}
+
+.fullWidth
+{
+	display:block;
+	margin-left:0px;
+	margin-right:0px;
+	z-index:10;
+}
+#game .fullWidth
+{
+	height:auto;
+	min-height:auto;
+}
+.fullWidth,.fullWidth:hover
+{
+	/*background:rgba(0,0,0,0.5);
+	background:linear-gradient(to bottom,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0.5) 100%);*/
+	background:linear-gradient(to right,rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0) 100%);
+	box-shadow:none;
+}
+.fullWidth:before,.fullWidth:after
+{
+	content:'';
+	height:1px;
+	background:linear-gradient(to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.25) 50%,rgba(255,255,255,0) 100%);
+	position:absolute;
+	left:0px;
+	right:0px;
+	z-index:-1;
+}
+.fullWidth:before{top:-1px;}
+.fullWidth:after{bottom:-1px;}
+
+.fullWidth .thing-icon
+{
+	margin-top:-14px;
+	margin-bottom:-14px;
+}
+.fullWidth .thing-text
+{
+	margin-top:-4px;
+	margin-bottom:-4px;
+}
+
+#game.filtersOn .thing-icon{filter:drop-shadow(3px 3px 1px rgba(0,0,0,0.5));}
+
